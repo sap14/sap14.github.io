@@ -1,152 +1,152 @@
-:root {
-  --bg: #FAF9F7;
-  --text: #333333;
-  --accent: #6F4D5F;
-  --secondary: #AFA09A;
-  --white: #fff;
-}
+/* style.css */
 
 body {
-  margin: 0;
   font-family: 'Inter', sans-serif;
-  background-color: var(--bg);
-  color: var(--text);
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+  scroll-behavior: smooth;
 }
 
+/* Navbar */
 .navbar {
-  background: transparent;
-  padding: 24px 40px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 1000;
 }
-
-.navbar ul {
+.nav-logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #333;
+}
+.nav-links {
   list-style: none;
   display: flex;
-  gap: 40px;
+  gap: 1.5rem;
+  margin: 0;
 }
-
-.navbar a {
-  color: var(--text);
+.nav-links a {
   text-decoration: none;
+  color: #333;
   font-weight: 500;
 }
-
-main {
-  padding: 0 60px;
+.nav-links a.active {
+  border-bottom: 2px solid #5e9ea7;
+}
+.toggle-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 
+/* Intro Section */
 .intro {
+  padding: 4rem 2rem;
+  background: linear-gradient(to right, #f3f2ed, #e3e0d5);
+  background-image: url('assets/leaf-pattern.svg'), radial-gradient(circle at 10% 10%, #e2f0cb 0%, transparent 70%), radial-gradient(circle at 90% 90%, #c9d6b8 0%, transparent 70%);
+  background-repeat: no-repeat;
+  background-position: top right, top left, bottom right;
+  background-size: 300px, 300px, 300px;
+  transition: background-position 0.3s ease-in-out;
+}
+.intro-wrapper {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding: 100px 0;
-  gap: 40px;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-
 .intro-content {
-  flex: 1 1 480px;
+  flex: 1 1 55%;
 }
-
 .intro-content h1 {
-  font-size: 3rem;
-  font-weight: 800;
+  font-size: 2.2rem;
   margin-bottom: 0.5rem;
 }
-
 .intro-content h2 {
   font-size: 1.5rem;
-  font-weight: 500;
-  margin-bottom: 1rem;
-  color: var(--accent);
+  color: #5e9ea7;
 }
-
 .intro-content p {
-  font-size: 1.05rem;
-  line-height: 1.7;
-  margin-bottom: 1.5rem;
+  max-width: 600px;
+  line-height: 1.6;
+  margin: 1rem 0;
 }
-
-.btn {
-  background: var(--text);
-  color: var(--white);
-  padding: 12px 24px;
-  border-radius: 6px;
+.intro-content .btn {
+  display: inline-block;
+  background: #5e9ea7;
+  color: white;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: bold;
 }
-
-.btn:hover {
-  background: var(--accent);
-}
-
 .intro-img {
-  flex: 1 1 320px;
-  text-align: center;
+  flex: 1 1 35%;
+  display: flex;
+  justify-content: center;
 }
-
 .intro-img img {
-  width: 260px;
-  border-radius: 12px;
+  max-width: 280px;
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
 }
 
-.social-icons {
-  margin-bottom: 20px;
+/* Social icons */
+.social-icons a {
+  margin-right: 1rem;
+  font-size: 1.3rem;
+  text-decoration: none;
 }
 
-.social-icons a img {
-  width: 24px;
-  margin-right: 14px;
-  opacity: 0.7;
-  transition: opacity 0.3s;
-}
-
-.social-icons a:hover img {
-  opacity: 1;
-}
-
+/* Sections */
 section {
-  padding: 80px 0;
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #333;
 }
 
-h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  font-weight: 700;
+.project-list li,
+.skills-category p,
+section p,
+section ul {
+  line-height: 1.7;
+  margin-bottom: 1rem;
 }
 
-.project-grid {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+.skills-category h3 {
+  font-size: 1.1rem;
+  color: #444;
+  margin-top: 1.5rem;
 }
 
-.project {
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.04);
+/* Dark mode */
+.dark-mode {
+  background-color: #1d1d1d;
+  color: #f1f1f1;
 }
-
-.project h3 {
-  margin: 0;
-  font-size: 1.2rem;
-  color: var(--accent);
+.dark-mode .navbar,
+.dark-mode .intro {
+  background-color: #2c2c2c;
+  background-image: none;
 }
-
-.project span {
-  display: block;
-  font-size: 0.9rem;
-  color: var(--secondary);
-  margin-top: 8px;
-}
-
-footer {
-  text-align: center;
-  padding: 40px;
-  background-color: var(--text);
-  color: #fff;
+.dark-mode a,
+.dark-mode .nav-logo {
+  color: #d0f0ff;
 }
