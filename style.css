@@ -1,178 +1,152 @@
+:root {
+  --bg: #FAF9F7;
+  --text: #333333;
+  --accent: #6F4D5F;
+  --secondary: #AFA09A;
+  --white: #fff;
+}
+
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background-color: #fdfaf6;
-  color: #1f2937;
+  background-color: var(--bg);
+  color: var(--text);
 }
 
 .navbar {
   background: transparent;
-  padding: 20px 40px;
+  padding: 24px 40px;
   display: flex;
   justify-content: flex-end;
-  position: fixed;
-  width: 100%;
-  z-index: 10;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
 .navbar ul {
-  display: flex;
   list-style: none;
-  gap: 30px;
+  display: flex;
+  gap: 40px;
 }
 
 .navbar a {
+  color: var(--text);
   text-decoration: none;
-  color: #1f2937;
   font-weight: 500;
-  font-size: 1rem;
 }
 
-.navbar a:hover {
-  color: #3f82e0;
+main {
+  padding: 0 60px;
 }
 
-.hero {
+.intro {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 120px 60px 60px;
   flex-wrap: wrap;
+  align-items: center;
+  padding: 100px 0;
+  gap: 40px;
 }
 
-.hero-text {
-  flex: 1 1 45%;
-  max-width: 500px;
+.intro-content {
+  flex: 1 1 480px;
 }
 
-.hero-text h1 {
-  font-size: 2.8rem;
-  margin-bottom: 10px;
-}
-
-.hero-text h1 span {
+.intro-content h1 {
+  font-size: 3rem;
   font-weight: 800;
+  margin-bottom: 0.5rem;
 }
 
-.hero-text h2 {
+.intro-content h2 {
   font-size: 1.5rem;
-  margin-bottom: 20px;
-  font-weight: 400;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: var(--accent);
 }
 
-.hero-text p {
-  margin-bottom: 30px;
-  font-size: 1rem;
-  line-height: 1.6;
+.intro-content p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
 }
 
-.hero-text .btn {
-  display: inline-block;
-  background-color: #1f2937;
-  color: white;
-  padding: 12px 20px;
+.btn {
+  background: var(--text);
+  color: var(--white);
+  padding: 12px 24px;
   border-radius: 6px;
   text-decoration: none;
   font-weight: 600;
-  transition: background 0.3s ease;
 }
 
-.hero-text .btn:hover {
-  background-color: #2563eb;
+.btn:hover {
+  background: var(--accent);
 }
 
-.hero-img {
-  flex: 1 1 45%;
+.intro-img {
+  flex: 1 1 320px;
   text-align: center;
 }
 
-.hero-img img {
-  width: 100%;
-  max-width: 320px;
+.intro-img img {
+  width: 260px;
   border-radius: 12px;
-  object-fit: cover;
 }
 
-/* Section Styling */
+.social-icons {
+  margin-bottom: 20px;
+}
+
+.social-icons a img {
+  width: 24px;
+  margin-right: 14px;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.social-icons a:hover img {
+  opacity: 1;
+}
+
 section {
-  padding: 60px 40px;
-  max-width: 1000px;
-  margin: auto;
+  padding: 80px 0;
 }
 
 h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #1f2937;
+  font-weight: 700;
 }
 
-/* Projects Grid */
-.projects-grid {
+.project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 .project {
-  background-color: #ffffff;
+  background: #fff;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.04);
-  transition: transform 0.3s ease;
-}
-
-.project:hover {
-  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.04);
 }
 
 .project h3 {
   margin: 0;
-  color: #3f82e0;
+  font-size: 1.2rem;
+  color: var(--accent);
 }
 
-.project small {
+.project span {
   display: block;
-  margin-top: 10px;
-  color: #555;
+  font-size: 0.9rem;
+  color: var(--secondary);
+  margin-top: 8px;
 }
 
-/* Contact */
-#contact p a {
-  color: #3f82e0;
-  text-decoration: none;
-}
-
-#contact p a:hover {
-  text-decoration: underline;
-}
-
-/* Footer */
 footer {
   text-align: center;
-  padding: 30px;
-  background: #1f2937;
-  color: white;
-  font-size: 0.9rem;
-  margin-top: 60px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-    padding-top: 140px;
-  }
-
-  .navbar {
-    justify-content: center;
-  }
-
-  .hero-text, .hero-img {
-    flex: 1 1 100%;
-  }
-
-  .hero-img img {
-    margin-top: 30px;
-  }
+  padding: 40px;
+  background-color: var(--text);
+  color: #fff;
 }
