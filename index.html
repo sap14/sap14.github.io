@@ -4,87 +4,69 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shreya Pandit | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <nav class="navbar">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
   <header class="hero">
-    <h1>Hi, I'm Shreya Pandit</h1>
-    <p>Software Engineer @ TietoEVRY | Full Stack Developer</p>
-    <a href="#projects" class="btn">View Projects</a>
-    <a href="assets/resume.pdf" target="_blank" class="btn">Download Resume</a>
+    <div class="hero-text">
+      <h1>Hello, I'm <span>Shreya Pandit</span></h1>
+      <h2>I’m a software developer</h2>
+      <p>I work at building web applications and exploring new technologies. Here is where you can find me on the web.</p>
+      <a href="#projects" class="btn">View My Work</a>
+    </div>
+    <div class="hero-img">
+      <img src="assets/profile.jpg" alt="Shreya Pandit">
+    </div>
   </header>
 
   <section id="about">
     <h2>About Me</h2>
-    <p>I’m an Electronics and Telecommunications Engineer turned Software Developer, skilled in Java, Angular, React, and Spring Boot. I bring a blend of software and hardware knowledge to solve real-world problems. I’m currently working at TietoEVRY, aspiring to grow as a full-stack developer.</p>
-  </section>
-
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul class="skills-grid">
-      <li>Java</li>
-      <li>Angular</li>
-      <li>React</li>
-      <li>Spring Boot</li>
-      <li>Hibernate</li>
-      <li>SQL</li>
-      <li>Python</li>
-      <li>DevOps</li>
-      <li>JavaScript</li>
-    </ul>
+    <p>I’m an Electronics and Telecommunications Engineer turned Software Developer, skilled in Java, Angular, React, Spring Boot, and DevOps tools. I enjoy solving real-world problems by combining hardware and software skills. Currently at TietoEVRY, I’m passionate about learning and building full stack systems that matter.</p>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
-    <div class="project">
-      <h3>Veterinary Clinic Management System</h3>
-      <p>Web-based app for managing pet health records with role-based access for doctors and pet owners.</p>
-      <p><strong>Tech:</strong> Java, AngularJS, Hibernate, MySQL</p>
+    <div class="projects-grid">
+      <div class="project">
+        <h3>Veterinary Clinic Management System</h3>
+        <p>Role-based app for pet health records.</p>
+        <small>Java, AngularJS, Hibernate, MySQL</small>
+      </div>
+      <div class="project">
+        <h3>Spam Detection with ML</h3>
+        <p>Email/SMS classifier using NLP & ML models.</p>
+        <small>Python, TF-IDF, Naïve Bayes, SVM</small>
+      </div>
+      <div class="project">
+        <h3>LPG Monitoring System</h3>
+        <p>IoT-based solution for leak alerts and auto-booking.</p>
+        <small>NodeMCU, Blynk App, Sensors</small>
+      </div>
+      <div class="project">
+        <h3>Women’s Safety Device</h3>
+        <p>Emergency alert device using GSM & GPS.</p>
+        <small>Arduino, GSM Module, GPS</small>
+      </div>
     </div>
-    <div class="project">
-      <h3>Spam Detection with ML</h3>
-      <p>Email/SMS spam detection using Naïve Bayes, SVM, and Random Forest with high accuracy.</p>
-      <p><strong>Tech:</strong> Python, NLP, TF-IDF, EDA</p>
-    </div>
-    <div class="project">
-      <h3>Smart LPG Monitoring</h3>
-      <p>IoT-based system for gas leakage detection and automatic cylinder booking notifications.</p>
-      <p><strong>Tech:</strong> NodeMCU, Sensors, Blynk App, Proteus</p>
-    </div>
-    <div class="project">
-      <h3>Women’s Safety Device</h3>
-      <p>Low-cost emergency alert device using GPS and GSM to notify family and police.</p>
-      <p><strong>Tech:</strong> Arduino, GSM, GPS</p>
-    </div>
-  </section>
-
-  <section id="experience">
-    <h2>Experience</h2>
-    <ul>
-      <li><strong>Software Engineer</strong> @ TietoEVRY (Apr 2025 – Present)</li>
-      <li><strong>Junior Software Engineer</strong> (Jul 2022 – Mar 2025)</li>
-    </ul>
-  </section>
-
-  <section id="certifications">
-    <h2>Certifications</h2>
-    <ul>
-      <li>Sensors and Sensor Circuit Design</li>
-      <li>Cybersecurity Tools & Attacks</li>
-      <li>Introduction to Virtual Reality</li>
-      <li>Introduction to Artificial Intelligence</li>
-    </ul>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:shreya14pandit@gmail.com">shreya14pandit@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/shreya-pandit-web" target="_blank">linkedin.com/in/shreya-pandit-web</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/shreya-pandit-web" target="_blank">linkedin.com/in/shreya-pandit-web</a></p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Shreya Pandit. All rights reserved.</p>
+    <p>&copy; 2025 Shreya Pandit</p>
   </footer>
 </body>
 </html>
